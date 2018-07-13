@@ -1,0 +1,23 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "interfaces/account/proto/position.proto";
+import "interfaces/order/proto/order.proto";
+
+package interface;
+
+message Account {
+  map<int64, Order> order_id_to_order = 1;
+  map<int64, Orders> order_id_to_executed_orders = 2;
+  map<int64, Orders> order_id_to_finished_orders = 3;
+  map<string, PositionPool> security_id_to_position_pool = 4;
+  optional double cash = 5;
+  optional string id = 6;
+  optional string strategy_name = 7;
+}
+
+enum AccountStatus {
+	EMPTY = 1;
+}

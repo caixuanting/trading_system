@@ -1,0 +1,12 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package signal_manager;
+
+message SignalMessage {
+	optional string data_id = 1;
+	optional string timestamp = 2;
+	optional string timestamp_from_data = 3;
+}

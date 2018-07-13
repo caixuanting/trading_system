@@ -1,0 +1,10 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package account_keeper;
+
+message AccountMessage {
+  optional string account_id = 1;
+}

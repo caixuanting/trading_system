@@ -1,0 +1,39 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package interface;
+
+import "interfaces/data/proto/snapshot.proto";
+import "utils/proto/time_interval.proto";
+
+enum SignalType {
+	SIMPLE = 1;
+	MOVING_AVERAGE = 2;
+}
+
+// Next tag: 13.
+message SignalConfig {
+	// Common fields.
+	optional string name = 1;
+	optional SignalType signal_type = 2;
+	repeated util.TimeInterval time_interval = 3;
+	optional bool is_visible = 12;
+	
+	// For SIMPLE.
+	optional string data_id = 4;
+	optional DataType data_type = 5;
+
+  // For MOVING_AVERGAE.
+	optional uint32 num_periods = 6;
+	optional uint32 period_in_seconds = 7;
+	optional string time_signal_name = 8;
+	optional string data_signal_name = 9;
+	optional string lookup_command = 10;
+	optional string dump_command = 11;
+}
+
+message SignalConfigs {
+	repeated SignalConfig signal_config = 1;
+}

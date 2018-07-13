@@ -1,0 +1,83 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package interface;
+
+enum DataType {
+	LEVEL_1_BID_PRICE = 1;
+	LEVEL_1_BID_VOLUME = 2;
+	LEVEL_1_ASK_PRICE = 3;
+	LEVEL_1_ASK_VOLUME = 4;
+	LAST_PRICE = 5;
+	TOTAL_VOLUME = 6;
+	CURRENT_VOLUME = 7;
+	HIGHEST_PRICE = 8;
+	LOWEST_PRICE = 9;
+	UPPER_LIMIT_PRICE = 10;
+	LOWER_LIMIT_PRICE = 11;
+	OPEN_INTEREST = 12;
+	COUNT = 13;
+	TIMESTAMP = 14;
+}
+
+// Next tag: 48
+message Snapshot {
+  // Security information.
+  optional string exchange_id = 1;
+  optional string exchange_inst_id = 2;
+  optional string instrument_id = 3;
+
+  // Time information.
+  optional string action_day = 4;
+  optional string trading_day = 47;
+  optional string exchange_time = 5;
+  optional string local_time = 6;
+
+  // Price information.
+  optional double pre_settlement_price = 7;
+  optional double pre_close_price = 8;
+  optional double open_price = 9;
+  optional double last_price = 10;
+  optional double highest_price = 11;
+  optional double lowest_price = 12;
+  optional double close_price = 13;
+  optional double upper_limit_price = 14;
+  optional double lower_limit_price = 15;
+  optional double level_1_bid_price = 16;
+  optional double level_2_bid_price = 17;
+  optional double level_3_bid_price = 18;
+  optional double level_4_bid_price = 19;
+  optional double level_5_bid_price = 20;
+  optional double level_1_ask_price = 21;
+  optional double level_2_ask_price = 22;
+  optional double level_3_ask_price = 23;
+  optional double level_4_ask_price = 24;
+  optional double level_5_ask_price = 25;
+  optional double average_price = 26;
+  optional double settlement_price = 27;
+
+  // Volume information.
+  optional int64 pre_open_interest = 28;
+  optional int64 open_interest = 29;
+  optional int64 total_volume = 30;
+  optional int64 current_volume = 46;
+  optional int64 level_1_bid_volume = 31;
+  optional int64 level_2_bid_volume = 32;
+  optional int64 level_3_bid_volume = 33;
+  optional int64 level_4_bid_volume = 34;
+  optional int64 level_5_bid_volume = 35;
+  optional int64 level_1_ask_volume = 36;
+  optional int64 level_2_ask_volume = 37;
+  optional int64 level_3_ask_volume = 38;
+  optional int64 level_4_ask_volume = 39;
+  optional int64 level_5_ask_volume = 40;
+
+  // Miscellaneous information.
+  optional int64 count = 41;
+  optional double turn_over = 42;
+  optional double pre_delta = 43;
+  optional double curr_delta = 44;
+  optional bool is_valid = 45 [default = false];
+}

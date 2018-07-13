@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS test;
+USE test;
+CREATE TABLE IF NOT EXISTS numbers (number int);
+CREATE TABLE IF NOT EXISTS signals (name VARCHAR(50), datetime TIMESTAMP, value VARCHAR(500));
+CREATE TABLE IF NOT EXISTS accounts(account_id VARCHAR(100), account VARCHAR(2000), PRIMARY KEY (account_id));

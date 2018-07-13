@@ -1,0 +1,53 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package interface;
+
+enum OrderStatus {
+	NEW_ORDER = 1;
+	ORDER_SENT_TO_EXCHANGE = 2;
+	TRADED_ORDER = 3;
+	CANCEL_ORDER = 4;
+	CANCEL_SENT_TO_EXCHANGE = 5;
+	CANCELED_ORDER = 6;
+	ERROR_ORDER = 7;
+	WAITING_FOR_CONFIRM_ORDER = 8;
+}
+
+enum OrderAction {
+	BUY = 1;
+	SELL = 2;
+}
+
+enum OrderDirection {
+  OPEN = 1;
+  CLOSE = 2;
+  CLOSE_TODAY = 3;
+  CLOSE_YESTERDAY = 4;
+}
+
+enum PriceType {
+	LIMIT_PRICE = 1;
+	MARKET_PRICE = 2;
+}
+
+message Order {
+	optional int64 id = 1;
+	optional string security_id = 2;
+	optional string name = 12;
+	optional string strategy_name = 3;
+	optional string create_timestamp = 4;
+	optional string execute_timestamp = 5;
+	optional int64 quantity = 6;
+	optional double price = 7;
+	optional OrderStatus status = 8 [default = NEW_ORDER];
+	optional OrderAction action = 9;
+	optional OrderDirection direction = 10;
+	optional PriceType price_type = 11 [default = LIMIT_PRICE];
+}
+
+message Orders {
+	repeated Order order = 1;
+}

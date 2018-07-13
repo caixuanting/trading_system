@@ -1,0 +1,25 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package data_receiver;
+
+message TimeInterval {
+  // Time in format YYYY-MM-DD HH:MM:SS.
+  optional string begin_time = 1;
+  // Time in format YYYY-MM-DD HH:MM:SS.
+  optional string end_time = 2;
+}
+
+// Next tag: 9
+message CtpFutureDataClientConfig {
+  optional string name = 1;
+  optional string exchange = 8;
+  optional string log_dir = 2;
+  repeated string frontend_address = 3;
+  optional string broker_id = 4;
+  optional string user_id = 5;
+  optional string password = 6;
+  repeated TimeInterval time_interval = 7;
+}

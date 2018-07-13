@@ -1,0 +1,11 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package data_receiver;
+
+message DataMessage {
+  optional string data_id = 1;
+  optional string timestamp = 2;
+}

@@ -1,0 +1,27 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "http_server/proto/http_server_config.proto";
+import "interfaces/signal/proto/signal_config.proto";
+import "modules/account_keeper/proto/account_keeper_config.proto";
+import "modules/data_receiver/proto/data_receiver_config.proto";
+import "modules/event_scheduler/proto/event_scheduler_config.proto";
+import "modules/order_maker/proto/order_maker_config.proto";
+import "modules/signal_manager/proto/signal_manager_config.proto";
+import "modules/strategy_runner/proto/strategy_runner_config.proto";
+import "utils/proto/database_config.proto";
+
+message SystemConfig {
+  optional account_keeper.AccountKeeperConfig account_keeper_config = 1;
+  optional data_receiver.DataReceiverConfig data_receiver_config = 2;
+  optional event_scheduler.EventSchedulerConfig event_scheduler_config = 3;
+  optional http_server.HttpServerConfig http_server_config = 4;
+  optional interface.SignalConfigs signal_configs = 6;
+  optional signal_manager.SignalManagerConfig signal_manager_config = 7;
+  optional strategy_runner.StrategyRunnerConfig strategy_runner_config = 8;
+  optional string log_dir = 9;
+  optional order_maker.OrderMakerConfig order_maker_config = 10;
+  optional util.DatabaseConfig database_config = 11;
+}

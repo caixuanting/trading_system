@@ -1,0 +1,187 @@
+log_dir: "log/"
+
+database_config {
+  host: "localhost"
+  user: "root"
+  password: "cai1984"
+  database: "trading_system"
+}
+ 
+event_scheduler_config {
+	num_threads: 2
+}
+
+account_keeper_config {
+  database_config {
+    host: "localhost"
+    user: "root"
+    password: "cai1984"
+    database: "trading_system"
+  }
+}
+
+data_receiver_config {
+	ctp_future_data_client_config {
+		name: "YIN_HE_CTP_FUTURE"
+		log_dir: "log/yin_he_ctp_future/"
+		frontend_address: "tcp://180.166.103.21:51213"
+		frontend_address: "tcp://58.247.171.147:51213"
+		frontend_address: "tcp://101.230.198.43:51213"
+		frontend_address: "tcp://27.115.78.35:51213"
+		broker_id: "4040"
+		user_id: "858093"
+		password: ""
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+	data_dir: "data"
+	database_config {
+    host: "localhost"
+    user: "root"
+    password: "cai1984"
+    database: "trading_system"
+  }
+}
+
+signal_configs {
+	signal_config {
+		name: "RB1705_LAST_PRICE"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: LAST_PRICE
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_TIMESTAMP"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: TIMESTAMP
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_MINUTE"
+		signal_type: MOVING_AVERAGE
+		lookup_command: "SELECT name,value FROM signals WHERE name='RB1705_MINUTE'"
+		dump_command: "INSERT INTO signals VALUES"
+		num_periods: 1
+		period_in_seconds: 60
+		time_signal_name: "RB1705_TIMESTAMP"
+		data_signal_name: "RB1705_LAST_PRICE"
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+}
+
+signal_manager_config {
+	database_config {
+    host: "localhost"
+    user: "root"
+    password: "cai1984"
+    database: "trading_system"
+  }
+	signal_dir: "signal"
+}
+
+order_maker_config {
+	ctp_future_order_client_config {
+		name: "YIN_HE_CTP_FUTURE"
+		log_dir: "log/yin_he_ctp_future/"
+		frontend_address: "tcp://180.166.103.21:51205"
+		frontend_address: "tcp://58.247.171.147:51205"
+		frontend_address: "tcp://101.230.198.43:51205"
+		frontend_address: "tcp://27.115.78.35:51205"
+		broker_id: "4040"
+		user_id: "858093"
+		password: ""
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+}
+
+strategy_runner_config {
+	strategy_configs {
+		strategy_config {
+			name: "test_strategy"
+      data_id: "cn.shfe.rb1705"
+			type: TEST
+			time_interval {
+				begin_time: "09:00:00"
+				end_time: "10:14:00"
+			}
+			time_interval {
+				begin_time: "10:30:00"
+				end_time: "11:29:00"
+			}
+			time_interval {
+				begin_time: "13:30:00"
+				end_time: "14:59:00"
+			}
+			time_interval {
+				begin_time: "21:00:00"
+				end_time: "22:59:00"
+			}
+		}
+	}
+}
+
+http_server_config {
+	address: "0.0.0.0"
+	port: "10001"
+	log_dir: "log"
+}

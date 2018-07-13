@@ -1,0 +1,10 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package event_scheduler;
+
+message EventSchedulerConfig {
+  optional uint32 num_threads = 1;
+}

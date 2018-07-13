@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Trading System
+		</title>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+			.w3-sidenav {
+				width: 120px;
+				background: #222;
+				color: white;
+			}
+			.main {margin-left: 120px}
+			@media only screen and (max-width: 600px) {.main {margin-left: 0}}
+		</style>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawLastPriceChart);
+      google.charts.setOnLoadCallback(drawVolumeChart);
+      function drawLastPriceChart() {
+        var data = new google.visualization.arrayToDataTable([
+        	['timestamp', 'last_price'],
+          {last_price_data}
+        ]);
+
+        var options = {
+        	title:'Last Price', 
+        	curveType: 'function',
+          legend: { position: 'bottom' }
+       };
+
+        var chart = new google.visualization.LineChart(document.getElementById('last_price'));
+        chart.draw(data, options);
+      }
+      
+      function drawVolumeChart() {
+        var data = new google.visualization.arrayToDataTable([
+        	['timestamp', 'current_volume'],
+          {current_volume_data}
+        ]);
+
+        var options = {
+        	title:'Current Volume',
+        	curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('current_volume'));
+        chart.draw(data, options);
+      }
+    </script>
+	</head>
+	
+	<body>
+		<nav class="w3-sidenav w3-center w3-small w3-hide-small">
+			<a class="w3-padding-large w3-hover-black" href="/home">
+				<i class="fa fa-home w3-xxlarge"></i>
+				<p>Home</p>
+    	</a>
+    	<a class="w3-padding-large w3-black" href="/security">
+				<i class="fa fa-database w3-xxlarge"></i>
+    		<p>Security</p>
+    	</a>
+    	<a class="w3-padding-large w3-hover-black" href="/signal">
+				<i class="fa fa-database w3-xxlarge"></i>
+    		<p>Signal</p>
+    	</a>
+    </nav>
+    <div class="main">
+    	<div class="w3-content w3-justify w3-padding-64"><header><h2>{security_id}</h2></header></div>
+    	<div class="w3-content w3-justify w3-padding-64" id="last_price"></div>
+    	<div class="w3-content w3-justify w3-padding-64" id="current_volume"></div>
+    </div>
+    
+    
+	</body>
+</html>

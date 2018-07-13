@@ -1,0 +1,13 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package order_maker;
+
+import "modules/order_maker/clients/proto/ctp_future_order_client_config.proto";
+
+message OrderMakerConfig {
+	repeated CtpFutureOrderClientConfig ctp_future_order_client_config = 1;
+}
+

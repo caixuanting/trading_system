@@ -1,0 +1,15 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "modules/data_receiver/clients/proto/ctp_future_data_client_config.proto";
+import "utils/proto/database_config.proto";
+
+package data_receiver;
+
+message DataReceiverConfig {
+  optional string data_dir = 1;
+  optional util.DatabaseConfig database_config = 2;
+  repeated CtpFutureDataClientConfig ctp_future_data_client_config = 3;
+}

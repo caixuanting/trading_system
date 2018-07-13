@@ -1,0 +1,12 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "utils/proto/database_config.proto";
+
+package account_keeper;
+
+message AccountKeeperConfig {
+  optional util.DatabaseConfig database_config = 1;
+}

@@ -1,0 +1,32 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package strategy_runner;
+
+message TimeInterval {
+  // Time in format YYYY-MM-DD HH:MM:SS.
+  optional string begin_time = 1;
+  // Time in format YYYY-MM-DD HH:MM:SS.
+  optional string end_time = 2;
+}
+
+enum StrategyType {
+	BASE = 1;
+	TEST = 2;
+}
+
+message StrategyConfig {
+	optional StrategyType type = 1;
+	optional string name = 2;
+	repeated TimeInterval time_interval = 3;
+	repeated string data_id = 4;
+	optional string account_id = 5;
+	optional string ask_price_signal = 6;
+	optional string bid_price_signal = 7;
+}
+
+message StrategyConfigs {
+	repeated StrategyConfig strategy_config = 1;
+}

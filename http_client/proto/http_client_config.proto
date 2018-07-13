@@ -1,0 +1,12 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package http_server;
+
+message HttpServerConfig {
+	optional string address = 1;
+	optional string port = 2;
+	optional string log_dir = 8;
+}

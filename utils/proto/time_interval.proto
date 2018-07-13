@@ -1,0 +1,13 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package util;
+
+message TimeInterval {
+  // Time in format YYYY-MM-DD HH:MM:SS.mmmmmm
+  optional string begin_time = 1;
+  // Time in format YYYY-MM-DD HH:MM:SS.mmmmmm
+  optional string end_time = 2;
+}

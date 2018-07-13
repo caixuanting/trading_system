@@ -1,0 +1,13 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package util;
+
+message DatabaseConfig {
+	optional string host = 1;
+	optional string user = 2;
+	optional string password = 3;
+	optional string database = 4;
+}

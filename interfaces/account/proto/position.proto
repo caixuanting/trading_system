@@ -1,0 +1,23 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package interface;
+
+enum PositionType {
+	LONG = 1;
+	SHORT = 2;
+}
+
+message Position {
+	optional string security_id = 1;
+	optional int64 quantity = 2;
+	optional double price = 3;
+	optional string timestamp = 4;
+	optional PositionType type = 5;
+}
+
+message PositionPool {
+	repeated Position position = 1;
+}

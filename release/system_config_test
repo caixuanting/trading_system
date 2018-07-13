@@ -1,0 +1,1389 @@
+account_keeper_config {
+	host: "localhost"
+	user: "root"
+	password: "cai1984"
+	database: "trading_system"
+}
+
+data_receiver_config {
+	ctp_future_data_client_config {
+		client_name: "YIN_HE_CTP_FUTURE"
+		log_dir: "log/yin_he_ctp_future/"
+		frontend_address: "tcp://180.168.146.187:10010"
+		broker_id: "9999"
+		user_id: "015236"
+		password: "123456"
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+	data_dir: "data"
+}
+
+event_scheduler_config {
+	num_threads: 2
+}
+
+http_server_config {
+	address: "0.0.0.0"
+	port: "10001"
+	home_page_file: "html/home.html"
+	security_page_file: "html/security.html"
+	security_chart_page_file: "html/security_chart.html"
+	signal_page_file: "html/signal.html"
+	signal_chart_page_file: "html/signal_chart.html"
+	log_dir: "log"
+}
+
+security_pool {
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.SR705"
+		symbol: "SR705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.WH705"
+		symbol: "WH705"
+		security_type: CTP_FUTURE
+		multiplier: 20
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.CF705"
+		symbol: "CF705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.TA705"
+		symbol: "TA705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.OI705"
+		symbol: "OI705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.RI703"
+		symbol: "RI703"
+		security_type: CTP_FUTURE
+		multiplier: 20
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.MA705"
+		symbol: "MA705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.FG705"
+		symbol: "FG705"
+		security_type: CTP_FUTURE
+		multiplier: 20
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.RS707"
+		symbol: "RS707"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.RM705"
+		symbol: "RM705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.ZC705"
+		symbol: "ZC705"
+		security_type: CTP_FUTURE
+		multiplier: 100
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.JR705"
+		symbol: "JR705"
+		security_type: CTP_FUTURE
+		multiplier: 20
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.LR705"
+		symbol: "LR705"
+		security_type: CTP_FUTURE
+		multiplier: 20
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.SF705"
+		symbol: "SF705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "czce"
+		id: "cn.czce.SM705"
+		symbol: "SM705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.m1705"
+		symbol: "m1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.a1705"
+		symbol: "a1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.c1705"
+		symbol: "c1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.y1705"
+		symbol: "y1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.l1705"
+		symbol: "l1705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.p1705"
+		symbol: "p1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 2.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.v1705"
+		symbol: "v1705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5.0
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.j1705"
+		symbol: "j1705"
+		security_type: CTP_FUTURE
+		multiplier: 100
+		tick: 0.5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.jm1705"
+		symbol: "jm1705"
+		security_type: CTP_FUTURE
+		multiplier: 60
+		tick: 0.5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.i1705"
+		symbol: "i1705"
+		security_type: CTP_FUTURE
+		multiplier: 100
+		tick: 0.5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.jd1705"
+		symbol: "jd1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.fb1702"
+		symbol: "fb1702"
+		security_type: CTP_FUTURE
+		multiplier: 500
+		tick: 0.05
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.bb1703"
+		symbol: "bb1703"
+		security_type: CTP_FUTURE
+		multiplier: 500
+		tick: 0.05
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.pp1705"
+		symbol: "pp1705"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "dce"
+		id: "cn.dce.cs1705"
+		symbol: "cs1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.ru1705"
+		symbol: "ru1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.fu1704"
+		symbol: "fu1704"
+		security_type: CTP_FUTURE
+		multiplier: 50
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.bu1706"
+		symbol: "bu1706"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.cu1703"
+		symbol: "cu1703"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 10
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.al1703"
+		symbol: "al1703"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.zn1703"
+		symbol: "zn1703"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.au1706"
+		symbol: "au1706"
+		security_type: CTP_FUTURE
+		multiplier: 1000
+		tick: 0.05
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.rb1705"
+		symbol: "rb1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.pb1703"
+		symbol: "pb1703"
+		security_type: CTP_FUTURE
+		multiplier: 5
+		tick: 5
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.ag1706"
+		symbol: "ag1706"
+		security_type: CTP_FUTURE
+		multiplier: 15
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.hc1705"
+		symbol: "hc1705"
+		security_type: CTP_FUTURE
+		multiplier: 10
+		tick: 1
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.ni1705"
+		symbol: "ni1705"
+		security_type: CTP_FUTURE
+		multiplier: 1
+		tick: 10
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "shfe"
+		id: "cn.shfe.sn1705"
+		symbol: "sn1705"
+		security_type: CTP_FUTURE
+		multiplier: 1
+		tick: 10
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "01:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IF1702"
+		symbol: "IF1702"
+		security_type: CTP_FUTURE
+		multiplier: 300
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IF1703"
+		symbol: "IF1703"
+		security_type: CTP_FUTURE
+		multiplier: 300
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.TF1703"
+		symbol: "TF1703"
+		security_type: CTP_FUTURE
+		multiplier: 10000
+		tick: 0.005
+		trading_interval {
+			begin_time: "09:15:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:00:00"
+			end_time: "15:15:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.T1706"
+		symbol: "T1706"
+		security_type: CTP_FUTURE
+		multiplier: 10000
+		tick: 0.005
+		trading_interval {
+			begin_time: "09:15:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:00:00"
+			end_time: "15:15:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IH1702"
+		symbol: "IH1702"
+		security_type: CTP_FUTURE
+		multiplier: 300
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IH1703"
+		symbol: "IH1703"
+		security_type: CTP_FUTURE
+		multiplier: 300
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IC1702"
+		symbol: "IC1702"
+		security_type: CTP_FUTURE
+		multiplier: 200
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+	security {
+		country: "cn"
+		exchange: "cffex"
+		id: "cn.cffex.IC1703"
+		symbol: "IC1703"
+		security_type: CTP_FUTURE
+		multiplier: 200
+		tick: 0.2
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		trading_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		trading_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+	}
+}
+signal_configs {
+	signal_config {
+		name: "RB1705_ASK_PRICE"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: LEVEL_1_ASK_PRICE
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_BID_PRICE"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: LEVEL_1_BID_PRICE
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_LAST_PRICE"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: LAST_PRICE
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_TIMESTAMP"
+		signal_type: SIMPLE
+		data_id: "cn.shfe.rb1705"
+		data_type: TIMESTAMP
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+	signal_config {
+		name: "RB1705_MINUTE"
+		signal_type: MOVING_AVERAGE
+		lookup_command: "SELECT name,value FROM signals WHERE name='RB1705_MINUTE'"
+		dump_command: "INSERT INTO signals VALUES"
+		num_periods: 1
+		period_in_seconds: 60
+		time_signal_name: "RB1705_TIMESTAMP"
+		data_signal_name: "RB1705_LAST_PRICE"
+		time_interval {
+			begin_time: "09:00:00"
+			end_time: "10:15:00"
+		}
+		time_interval {
+			begin_time: "10:30:00"
+			end_time: "11:30:00"
+		}
+		time_interval {
+			begin_time: "13:30:00"
+			end_time: "15:00:00"
+		}
+		time_interval {
+			begin_time: "21:00:00"
+			end_time: "23:00:00"
+		}
+	}
+}
+
+signal_manager_config {
+	host: "localhost"
+	user: "root"
+	password: "cai1984"
+	database: "trading_system"
+	directory: "signal"
+}
+
+strategy_runner_config {
+	strategy_configs {
+		strategy_config {
+			name: "test_strategy"
+      data_id: "cn.shfe.rb1705"
+			type: TEST
+			account_id: "test_account"
+			ask_price_signal: "RB1705_ASK_PRICE"
+			bid_price_signal: "RB1705_BID_PRICE"
+			time_interval {
+				begin_time: "09:05:00"
+				end_time: "11:25:00"
+			}
+			time_interval {
+				begin_time: "13:35:00"
+				end_time: "14:55:00"
+			}
+			time_interval {
+				begin_time: "21:05:00"
+				end_time: "22:55:00"
+			}
+		}
+	}
+}
+
+log_dir: "log/"
+
+order_maker_config {
+	ctp_future_order_client_config {
+		name: "YIN_HE_CTP_FUTURE"
+		log_dir: "log/yin_he_ctp_future/"
+		frontend_address: "tcp://180.168.146.187:10000"
+		broker_id: "9999"
+		user_id: "015236"
+		password: "123456"
+		trading_interval {
+			begin_time: "09:00:00"
+			end_time: "15:00:00"
+		}
+		trading_interval {
+			begin_time: "21:00:00"
+			end_time: "02:30:00"
+		}
+	}
+}

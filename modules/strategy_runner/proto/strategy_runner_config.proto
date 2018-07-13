@@ -1,0 +1,12 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package strategy_runner;
+
+import "modules/strategy_runner/strategies/proto/strategy_config.proto";
+
+message StrategyRunnerConfig {
+	optional StrategyConfigs strategy_configs = 1;
+}

@@ -1,0 +1,13 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "utils/proto/database_config.proto";
+
+package signal_manager;
+
+message SignalManagerConfig {
+	optional string signal_dir = 1;
+	optional util.DatabaseConfig database_config = 2;
+}

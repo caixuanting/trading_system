@@ -1,0 +1,21 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+import "utils/proto/database_config.proto";
+import "utils/proto/time_interval.proto";
+
+package order_maker;
+
+message CtpFutureOrderClientConfig {
+	optional string name = 1;
+	optional string log_dir = 2;
+	repeated string frontend_address = 3;
+  optional string broker_id = 4;
+  optional string user_id = 5;
+  optional string password = 6;
+  repeated util.TimeInterval time_interval = 7;
+  optional util.DatabaseConfig database_config = 8;
+}
+

@@ -1,0 +1,23 @@
+// Copyright 2016, Xuanting Cai
+// Email: caixuanting@gmail.com
+
+syntax = "proto2";
+
+package order_maker;
+
+enum Command {
+	PLACE_ORDER = 1;
+	CANCEL_ORDER = 2;
+	REQUEST_ACCOUNT_INFO = 3;
+	REQUEST_ACCOUNT_DETAIL = 4;
+	REQUEST_SECURITY_DETAIL = 5;
+}
+
+message OrderMessage {
+  optional Command command = 1;
+  optional string account_id = 2;
+  optional int64 order_id = 3;
+	optional string timestamp = 4;
+	optional string client_name = 5;
+	optional string exchange = 6;
+}
